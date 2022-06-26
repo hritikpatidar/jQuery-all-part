@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>jQuery part 3</title>
+        <style>
+        .perent{
+            font-size: 2em;
+            border:1px solid red;
+            padding:10px;
+            
+        }
+        .child{
+            border:1px solid green;
+            padding:10px;
+        }
+        .grandchild{
+            border:1px dashed black;
+            padding:10px;
+        }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div class="perent">
+            perent
+            <div class="child ">child
+                <div class="grandchild">grendchild 1.1</div>
+                <div class="grandchild">grendchild 1.2</div>
+                <div class="grandchild">grendchild 1.3</div>
+            </div>
+            <div class="child">
+                <div class="grandchild">grendchild 2.1</div>
+                <div class="grandchild">grendchild 2.2</div>
+                <div class="grandchild">grendchild 2.3</div>
+            </div>
+        </div>
+
+        <script>
+        
+            //()();
+            (function(){
+                //alert('hello')
+                //$(selection).action()
+                var x = $(".grandchild").parent();
+                //css("propeerty","value")
+                //console.log(x)
+                //x.css("color","red");
+                x.css("border","5px solid pink")
+
+                var y = $('.grandchild').parents();
+                y.css('border','10px solid red')
+
+                var z = $('.child').children();
+                z.css('color','blue')
+                z.css("border-color","green",)
+            })(jQuery);
+
+        </script>
+    </body>
+</html>

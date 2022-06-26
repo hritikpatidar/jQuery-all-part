@@ -1,0 +1,26 @@
+JQuery Traversing
+
+Parent ----> Child (Traversing Down/Desendants)
+
+Child ----> Parent (Traversing UP/Ancestors )
+
+Traversing Up the DOM Tree
+
+parent() is a jquery method/function
+parent method select the direct parent
+
+1. parent()  // direct parent
+2. parents() // All parent up to html tag
+3. parentsUntil() // All parent between two tags
+4. closest()
+
+
+
+children() => direct Child
+
+parent()   => direct parent
+
+
+find()   ==> go to last child
+
+parents() ---> go to last parent

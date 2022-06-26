@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery local linking </title>
+    </head>
+    <body>
+        
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script>
+            // jQuery local linking
+            //jQuery is built in js
+
+            // check if the page is loaded
+
+
+            //1. 
+
+
+            //$= $ is a reference to jQuery object
+            jQuery(function($){
+                alert('page loaded successfully');
+                // All jQuery code comes here...
+            });
+
+            //2. 
+            $(document).ready(function($){
+                alert('page loaded successfully 1');
+            });
+
+            //3. syntex 
+
+            //()();
+            (function(){
+                alert('page loaded successfully 2');
+            })(jQuery);
+
+            
+
+
+        </script>
+
+    </body>
+</html>

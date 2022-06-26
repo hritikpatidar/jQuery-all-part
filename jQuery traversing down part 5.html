@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery traversing down </title>
+        <style>
+            div{
+                border:10px solid red;
+                padding:20px;
+            }
+            div >ul{
+                border:10px solid pink;
+                padding:20px;
+            }
+            div > ul > li{
+                border:10px solid orange;
+                padding:20px;
+            }
+            div > ul > li > a{
+                border:10px solid blue;
+                display:block;
+                padding:20px;
+            }
+            div > ul > li > a > span{
+                display:block;
+               
+                border:10px solid red;
+                padding:20px;
+            }
+            div > ul > li > p{
+                border:1px solid black;
+                padding:20px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div>div
+            <ul>ul
+                <li>li
+                    <a href="#">a
+                        <span>span</span>
+                    </a>
+                    <p>
+                        ritik
+                    </p>
+                </li>
+                <li>li
+                    <a href="#">a
+                        <span>span</span>
+                    </a>
+                </li>
+                <li>li
+                    <a href="#">a
+                        <span>span</span>
+                    </a>
+                </li>
+                <li>li
+                    <a href="#">a
+                        <span>span</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+
+
+            //a. check if the page loaded methods
+                //1. (function($){})(jQuery);
+                //2. jQuery(function($){});
+                //3. $(document).ready(function(){});
+            //b. direct
+
+            $(document).ready(function(){
+                //$(selection).action();
+
+               var x = $("ul").children()
+               x.css("border","50px solid red");
+            // console.log(x);
+
+                var y = $("ul").find("a")
+                y.css({"backgroundColor":"pink","border":"2px solid blue"})
+
+                $("ul").find("span").css({"background-color":"gold","border":"2px solid blue"})
+
+                var z = $("ul").find("p")
+                z.css({"background-color":"black","border":"3px dashed red","color":"white"})
+            });
+        </script>
+    </body>
+</html>

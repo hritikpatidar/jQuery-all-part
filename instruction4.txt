@@ -1,0 +1,43 @@
+
+jquery traversing
+
+types of traversing
+1. child ------> parent traversing
+    this is ancestors traversing
+
+    Traversing Up the DOM Tree
+    three types of dom traversing
+    1.parent()
+        The parent() method returns the direct parent element of the selected element.
+
+        This method only traverse a single level up the DOM tree.
+
+        The following example returns the direct parent element of each <span>
+
+    2.parents()
+        The parents() method returns all ancestor elements of the selected element, all the way up to the document's root element (<html>).
+
+        The  following example returns all ancestors of all <span>
+
+    3.parentsUntil()
+        The parentsUntil() method returns all ancestor elements between two given arguments.
+
+        The following example returns all ancestor elements between a <span> and a <div>
+    4. closest()
+	Definition and Usage
+	The closest() method returns the first ancestor of the selected element.
+
+	An ancestor is a parent, grandparent, great-grandparent, and so on.
+	
+	The DOM tree: This method traverse upwards from the current element, all the way up to the document's root element (<html>), to find the first ancestor of DOM elements.
+
+	This method is similar to parents(), in that they both traverse up the DOM tree. The differences are as follows:
+
+	closest()
+
+Begins with the current element
+Travels up the DOM tree and returns the first (single) ancestor that matches the passed expression
+The returned jQuery object contains zero or one element
+
+2. parent -------> child traversing
+    this is a desendents traversing
